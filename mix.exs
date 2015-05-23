@@ -36,6 +36,7 @@ defmodule Blog.Mixfile do
      {:phoenix_live_reload, "~> 0.4", only: :dev},
      {:cowboy, "~> 1.0"},
      {:comeonin, "~> 1.0"},
-     {:canary, "~> 0.6.0"}]
+     {:canary, "~> 0.6.0"},
+     {:pot, "~> 0.9.2"}]
   end
 end

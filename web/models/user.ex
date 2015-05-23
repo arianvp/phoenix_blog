@@ -1,6 +1,8 @@
 defmodule Blog.User do
   use Blog.Web, :model
 
+  require Logger
+
   schema "users" do
     field :email, :string
     field :name, :string
@@ -19,9 +21,13 @@ defmodule Blog.User do
   with no validation performed.
   """
   def changeset(model, params \\ :empty) do
+    model |> inspect |> Logger.debug
     model
     |> cast(params, @required_fields, @optional_fields)
+    # hash the password before inserting
+    |> update_change(:password, &Comeonin.Bcrypt.hashpwsalt/1)
   end
+
 
 
 
