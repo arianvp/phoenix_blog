@@ -4,11 +4,12 @@ defmodule Blog.User do
   schema "users" do
     field :email, :string
     field :name, :string
+    field :password, :string
 
     timestamps
   end
 
-  @required_fields ~w(email name)
+  @required_fields ~w(email name password)
   @optional_fields ~w()
 
   @doc """
@@ -21,4 +22,7 @@ defmodule Blog.User do
     model
     |> cast(params, @required_fields, @optional_fields)
   end
+
+
+
 end
