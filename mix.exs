@@ -37,6 +37,7 @@ defmodule Blog.Mixfile do
      {:cowboy, "~> 1.0"},
      {:comeonin, "~> 1.0"},
      {:canary, "~> 0.6.0"},
-     {:pot, "~> 0.9.2"}]
+     {:pot, "~> 0.9.2"},
+     {:earmark, "~> 0.1.17"}]
   end
 end

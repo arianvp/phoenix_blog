@@ -16,3 +16,11 @@ config :blog, Blog.Repo,
   password: "postgres",
   database: "blog_test",
   size: 1 # Use a single connection for transactional tests
+
+# Configure your database
+config :blog, Blog.Repo,
+  adapter: Ecto.Adapters.Postgres,
+  username: "postgres",
+  password: "postgres",
+  database: "blog_test",
+  size: 1 # Use a single connection for transactional tests

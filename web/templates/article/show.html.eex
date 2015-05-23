@@ -1,17 +1,5 @@
-<h2>Show article</h2>
+<h1><%= @article.title %></h1>
+<section><%= @article.content |> Earmark.to_html |> raw %></section>
 
-<ul>
-
-  <li>
-    <strong>Title:</strong>
-    <%= @article.title %>
-  </li>
-
-  <li>
-    <strong>User:</strong>
-    <%= @article.user %>
-  </li>
-
-</ul>
 
 <%= link "Back", to: article_path(@conn, :index) %>
