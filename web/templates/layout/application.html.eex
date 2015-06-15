@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title><%= render_existing(view_module(@conn), "title.html", assigns) %></title>
+    <title><%= render_existing(view_module(@conn), "title."<>controller_template(@conn), assigns) %></title>
     <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
     <link rel="stylesheet" href="//cdn.jsdelivr.net/editor/0.1.0/editor.css">
     <script src="//cdn.jsdelivr.net/editor/0.1.0/editor.js"></script>
