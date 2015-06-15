@@ -9,7 +9,7 @@ defmodule Blog.Article do
     timestamps
   end
 
-  @required_fields ~w(title content)
+  @required_fields ~w(title user_id content)
   @optional_fields ~w()
 
   @doc """
